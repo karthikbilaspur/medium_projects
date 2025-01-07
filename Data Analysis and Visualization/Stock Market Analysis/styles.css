@@ -1,0 +1,81 @@
+/* Global Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Stock Dashboard Styles */
+  
+  #stock-dashboard {
+    margin: 20px;
+  }
+  
+  .stock-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stock-card h2 {
+    margin-top: 0;
+  }
+  
+  /* Portfolio Styles */
+  
+  #portfolio {
+    margin: 20px;
+  }
+  
+  .portfolio-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .portfolio-card h2 {
+    margin-top: 0;
+  }
+  
+  /* Responsive Design */
+  
+  @media only screen and (max-width: 768px) {
+    nav {
+      padding: 0.5em;
+    }
+    nav li {
+      margin-right: 10px;
+    }
+    .stock-card, .portfolio-card {
+      margin-bottom: 10px;
+    }
+  }

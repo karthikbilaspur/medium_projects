@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Stock Dashboard</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+ <h1>Stock Dashboard</h1>
+ <div id="stock-data"></div>
+ <script>
+ const stockData = {{ stock_data | tojson }};
+ // Render stock data
+ console.log(stockData);
+ </script>
+</body>
+</html>

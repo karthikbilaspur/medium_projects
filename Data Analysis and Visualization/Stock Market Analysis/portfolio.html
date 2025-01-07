@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Portfolio</h1>
+    <div id="portfolio-data"></div>
+    <script>
+        const portfolioData = {{ portfolio_data | tojson }};
+        // Render portfolio data
+        console.log(portfolioData);
+    </script>
+</body>
+</html>
