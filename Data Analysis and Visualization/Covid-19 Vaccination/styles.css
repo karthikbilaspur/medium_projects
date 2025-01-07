@@ -1,0 +1,103 @@
+/* Global styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  /* Navigation styles */
+  
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .nav-menu.show {
+    display: block;
+  }
+  
+  .nav-toggle {
+    position: relative;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Appointment styles */
+  
+  .appointment-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .appointment-date {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .appointment-time {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Vaccination reminder styles */
+  
+  .reminder-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reminder-time {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive design */
+  
+  @media only screen and (max-width: 768px) {
+    .appointment-container {
+      margin: 20px auto;
+    }
+  
+    .reminder-container {
+      margin: 20px auto;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .nav-menu {
+      position: static;
+      background-color: transparent;
+      box-shadow: none;
+    }
+  
+    .nav-toggle {
+      top: 10px;
+      right: 10px;
+    }
+  }

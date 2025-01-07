@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vaccination Reminder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+        </ul>
+    </nav>
+    <h1>Vaccination Reminder</h1>
+    <p>Dear {{ patient.name }},</p>
+    <p>Your upcoming vaccination appointment is scheduled for {{ appointment.appointment_date }}.</p>
+    <p>Vaccine: {{ vaccination.vaccine_name }} (Dose {{ vaccination.dose_number }})</p>
+    <p>Location: {{ appointment.location }}</p>
+    <p>Please arrive 15 minutes prior to your appointment time.</p>
+    <p>Best regards,</p>
+    <p>Covid-19 Vaccination Team</p>
+</body>
+</html>

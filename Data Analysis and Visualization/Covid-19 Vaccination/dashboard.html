@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        </ul>
+    </nav>
+    <h1>Welcome, {{ current_user.name }}!</h1>
+    <h2>Vaccination Records:</h2>
+    <ul>
+        {% for vaccination in current_user.vaccination_records %}
+            <li>{{ vaccination.vaccine_name }} (Dose {{ vaccination.dose_number }})</li>
+        {% endfor %}
+    </ul>
+    <h2>Appointments:</h2>
+    <ul>
+        {% for appointment in current_user.appointments %}
+            <li>{{ appointment.appointment_date }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
