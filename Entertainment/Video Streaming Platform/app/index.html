@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Streaming Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Video Streaming Platform</h1>
+    <ul>
+    {% for video in videos %}
+        <li>
+            <a href="{{ url_for('play', video_id=video.id) }}">{{ video.title }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+    <a href="{{ url_for('upload') }}">Upload Video</a>
+</body>
+</html>
