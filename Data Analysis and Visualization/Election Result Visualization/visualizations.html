@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Visualizations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Election Visualizations</h1>
+        <select id="party-select">
+            <option value="All">All</option>
+            {% for party in parties %}
+            <option value="{{ party }}">{{ party }}</option>
+            {% endfor %}
+        </select>
+        <div id="visualizations"></div>
+    </div>
+    <script>
+        fetch('/data')
+            .then(response => response.json())
+            .then(data => {
+                const labels = data.data.map(item => item.candidate);
+                const votes = data.data.map(item => item.votes);
+                
+                const ctx = document.getElementById('visualizations').getContext('2d');
+                const chart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels,
+                        datasets: [{
+                            label: 'Votes',
+                            data: votes,
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+            });
+        
+        document.getElementById('party-select').addEventListener('change', (e) => {
+            const party = e.target.value;
+            fetch(`/filter?party=${party}`)
+                .then(response => response.json())
+                .then(data => {
+                    const labels = data.data.map(item => item.candidate);
+                    const votes = data.data.map(item => item.votes);
+                    
+                    const ctx = document.getElementById('visualizations').getContext('2d');
+                    const chart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels,
+                            datasets: [{
+                                label: 'Votes',
+                                data: votes,
+                                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                borderColor: 'rgba(255, 99, 132, 1)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
+                            }
+                        }
+                    });
+                });
+        });
+    </script>
+</body>
+</html>
