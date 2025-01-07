@@ -1,0 +1,46 @@
+# Video Streaming Platform
+
+A simple video streaming platform built using Flask.
+
+
+## Features
+
+*   User authentication and authorization
+*   Video upload and playback functionality
+*   Custom video player with play, pause, and download controls
+*   Video search and filter functionality
+*   User profile and settings management
+
+
+## Installation
+
+1.  Clone the repository: `git clone https://github.com/your-username/video-streaming-platform.git`
+2.  Create a virtual environment: `python -m venv venv`
+3.  Activate the virtual environment: `source venv/bin/activate` (on Linux/Mac) or `venv\Scripts\activate` (on Windows)
+4.  Install dependencies: `pip install -r requirements.txt`
+5.  Run the application: `python app.py`
+
+
+## Usage
+
+1.  Register for an account: `/register`
+2.  Login: `/login`
+3.  Upload a video: `/upload`
+4.  Play a video: `/play/<video_id>`
+5.  View user profile: `/profile`
+
+
+## Contributing
+
+Pull requests are welcome!
+
+
+## License
+
+MIT License
+
+
+## Authors
+
+*   [Your Name](https://github.com/your-username)
+re
