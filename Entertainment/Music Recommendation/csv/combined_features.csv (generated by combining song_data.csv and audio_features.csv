@@ -1,0 +1,6 @@
+song_id,song_name,artist,genre,lyrics,danceability,energy,key,loudness,mode,speechiness,acousticness,instrumentalness,liveness,valence
+1,Happy,Pharrell Williams,Pop,"Happy lyrics",0.8,0.9,5,-5.0,1,0.2,0.5,0.8,0.1,0.6
+2,Uptown Funk,Mark Ronson ft. Bruno Mars,Funk,"Uptown Funk lyrics",0.7,0.8,4,-3.0,0,0.3,0.4,0.7,0.2,0.5
+3,Can't Stop the Feeling!,Justin Timberlake,Pop,"Can't Stop the Feeling! lyrics",0.9,0.95,6,-4.0,1,0.1,0.6,0.9,0.0,0.7
+4,We Found Love,Rihanna ft. Calvin Harris,Electronic,"We Found Love lyrics",0.6,0.7,3,-2.0,0,0.4,0.3,0.6,0.3,0.4
+5,SexyBack,Justin Timberlake,Pop,"SexyBack lyrics",0.8,0.85,5,-5.0,1,0.2,0.5,0.8,0.1,0.6
