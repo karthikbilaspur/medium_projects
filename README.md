@@ -179,7 +179,7 @@ All projects licensed under MIT License unless noted otherwise in subdirectories
 
 ### **Author**
 [Vasudev Karthik]  
-GitHub: [@asaudevkarthik ](https://github.com/karthikbilaspur)  
+GitHub: [@vasudevkarthik ](https://github.com/karthikbilaspur)  
 Email: karthikv81291@gmail.com
 
 
